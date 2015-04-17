@@ -2,18 +2,20 @@ doctype html
 html
   head
     meta(charset='utf-8')
-    title Apollo
+    title Airbender the Game
     link(rel='stylesheet', href='/vendor/font-awesome/css/font-awesome.min.css')
     link(rel='stylesheet', href=isProd ? '/index.min.css' : '/index.css')
     link(rel='shortcut icon', href='/favicon.ico')
   body
-    h1 Legend of Zelda
+    audio#sound
+    h1 Airbender the Game
     #user-creation
       input#email(type='email', placeholder='email')
       input#password(type='password', placeholder='password')
       button#create-user Create User
       button#login-user Login User
       button#logout-user Logout User
+      button#start-user Start User
 
     #character-creation
       input#handle(type='text', placeholder='handle')
@@ -22,6 +24,13 @@ html
 
     table#characters
       tbody
+    
+    table#board
+      tbody
+        - for (var y = 0; y<10; y++)
+          tr
+            - for (var x = 0; x < 10; x++)
+              td(data-x= x, data-y=y)
 
     script(src='/vendor/firebase/firebase.js')
     script(src='/vendor/jquery/dist/jquery.min.js')

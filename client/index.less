@@ -6,20 +6,40 @@
 
 body{
   background-color: gray;
+  background-image: url('/assets/airbender2.png');
+  background-repeat: no-repeat;
+}
+
+h1{
+  color: #FFFFFF;
 }
 
 #characters{
-  tr.active{
-    background-color: yellow;
-  }
-
+  float: left;
   td{
     border: 1px dashed #252525;
     font-size: 11px;
+    // background-color: lightblue;
 
     img{
-      width: 30px;
-      height: 30px;
+      width: 50px;
+      height: 50px;
     }
+  }
+  tr.active{
+    background-color: yellow;
+  }
+}
+
+#board {
+  td {
+    width: 50px;
+    height: 50px;
+    board: 1px solid #252525;
+    background-color: #cccccc;
+    background-size: cover;
+  }
+  .myCurrentPosition{
+    background-size: cover;
   }
 }
